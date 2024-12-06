@@ -12,7 +12,7 @@ apt-get update -y
 apt-get install apache2 -y
 ```
 
-Create HTMl file
+Create HTML file
 ```
 cd /var/www/html
 touch index.hmtl
