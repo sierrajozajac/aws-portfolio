@@ -9,7 +9,7 @@ In this example, I setting up an ubuntu instance. Memory can be decided accordin
 - Port 443 (HTTPS): Used for secure HTTPS web traffic. 
 ### Allocate elastic IP address. 
 You can do so by selecting 'Actions' in the top right of the EC2 Console and navigating to Networking > Associate Elastic IP.
-## Set up the web server on the EC2 instance
+## Set up the web server on the EC2 instance (Apache)
 ### To ssh into instance
 ```
 cd C:\
@@ -30,10 +30,10 @@ vi index.html
 ### Enable and start the apache service
 ```
 systemctl enable apache2
-systemctl start apach2
+systemctl start apache2
 ```
 You will now have the Apache Ubuntu Default Page hosted on your EC2 instance.
-## 2. Connect Route 53 url to EC2 web server
+## Connect Route 53 url to EC2 web server
 Copy your IPv4 address from your EC2 instance. \
 Open the Route 53 console at https://console.aws.amazon.com/route53/ . \
 In the navigation pane, choose 'Hosted zones'. \
@@ -50,3 +50,7 @@ Specify the following values:
   - Choose A – IPv4 address.
 - TTL (seconds)
   - Default value of 300.
+## Connecting CodePipeline
+### CodeCommit
+As of July 25, 2024, new customers are no longer able to sign up for AWS CodeCommit. Existing customers can continue to use the service as normal.
+### CodeBuild
