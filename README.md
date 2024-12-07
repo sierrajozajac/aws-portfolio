@@ -1,4 +1,4 @@
-# aws-portfolio
+# AWS Portfolio Website
 
 ## Setting up the EC2 instance
 Login to the AWS EC2 Console at https://console.aws.amazon.com/ec2/ . \
